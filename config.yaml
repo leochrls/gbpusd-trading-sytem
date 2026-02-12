@@ -1,0 +1,96 @@
+# Data paths
+data:
+  raw_dir: "data/raw"
+  raw_files:
+    - "data/raw/2022/DAT_MT_GBPUSD_M1_2022.csv"
+    - "data/raw/2023/DAT_MT_GBPUSD_M1_2023.csv"
+    - "data/raw/2024/DAT_MT_GBPUSD_M1_2024.csv"
+  m1_clean_parquet: "data/processed/gbpusd_m1_clean.parquet"
+  m1_clean_csv: "data/processed/gbpusd_m1_clean.csv"
+  m15_raw_parquet: "data/processed/gbpusd_m15_raw.parquet"
+  m15_raw_csv: "data/processed/gbpusd_m15_raw.csv"
+  processed_m15: "data/processed/gbpusd_m15.parquet"
+  train: "data/splits/train.parquet"
+  val: "data/splits/val.parquet"
+  test: "data/splits/test.parquet"
+
+# Split dates
+split:
+  train_start: "2022-01-01"
+  train_end: "2022-12-31"
+  val_start: "2023-01-01"
+  val_end: "2023-12-31"
+  test_start: "2024-01-01"
+  test_end: "2024-12-31"
+
+# Feature engineering
+features:
+  short_term:
+    ema_periods: [20, 50, 200]
+    rsi_period: 14
+    rolling_std_periods: [20, 100]
+
+  regime:
+    atr_period: 14
+    adx_period: 14
+    macd_fast: 12
+    macd_slow: 26
+    macd_signal: 9
+
+# ML parameters
+ml:
+  random_state: 42
+  test_size: 0.2
+  models:
+    logistic:
+      max_iter: 1000
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+    gradient_boosting:
+      n_estimators: 100
+      learning_rate: 0.1
+    lightgbm:
+      n_estimators: 200
+      max_depth: 7
+      num_leaves: 31
+
+# RL parameters (optimise RTX Ada 1000)
+rl:
+  env:
+    initial_balance: 10000
+    transaction_cost: 0.0002  # 2 pips
+    max_position: 1
+    warm_up: 200
+
+  dqn:
+    hidden_layers: [128, 64]
+    gamma: 0.99
+    learning_rate: 0.0001
+    epsilon_start: 1.0
+    epsilon_end: 0.01
+    epsilon_decay: 0.995
+    batch_size: 32
+    buffer_size: 10000
+    target_update_freq: 100
+    max_episodes: 1000
+    early_stopping_patience: 100
+
+# Backtesting
+backtest:
+  initial_capital: 10000
+  transaction_cost: 0.0002
+  slippage: 0.0001
+
+# API
+api:
+  host: "0.0.0.0"
+  port: 8000
+  model_version: "v1"
+  log_level: "INFO"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
+  rotation: "10 MB"
