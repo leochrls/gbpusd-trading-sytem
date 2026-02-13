@@ -66,6 +66,9 @@ data/processed/**
 *.feather
 *.hdf5
 *.h5
+*.html
+*.json
+*.pdf
 
 # ------------------------------------------------------------------------------
 # Models (IMPORTANT pour ce projet)
