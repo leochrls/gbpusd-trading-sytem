@@ -1,14 +1,16 @@
-| ID  | Tâche                              | Responsable | Branche Git                    | Status |
-|-----|------------------------------------|-------------|--------------------------------|--------|
-| T01 | Import M1 + contrôle régularité    | Léo         | leo__T01__import_m1            | DONE   |
-| T02 | Agrégation M1→M15                  | Binôme      | binome__T02__m15_agg           | TODO   |
-| T03 | Nettoyage M15 + rapport qualité    | Léo         | leo__T03__clean_m15            | TODO   |
-| T04 | Analyse exploratoire + ADF/ACF     | Binôme      | binome__T04__eda               | TODO   |
-| T05 | Feature Pack V2                    | Léo         | leo__T05__features_pack        | TODO   |
-| T06 | Baseline règles + backtest         | Binôme      | binome__T06__baseline          | TODO   |
-| T07 | ML (split temporel + modèles)      | Léo         | leo__T07__ml_models            | TODO   |
-| T08 | RL (env + reward + entraînement)   | Binôme      | binome__T08__rl_env            | TODO   |
-| T09 | Évaluation robuste                 | Léo         | leo__T09__evaluation           | TODO   |
-| T10 | API (endpoints + modèle)           | Binôme      | binome__T10__api_predict       | TODO   |
-| T11 | Versioning modèle                  | Léo         | leo__T11__model_versioning     | TODO   |
-| T12 | Docker + reproductibilité          | Binôme      | binome__T12__docker            | TODO   |
+# Suivi du Projet Data Science
+
+| ID  | Tâche | Responsable | Branche Git (Réelle) | Status | PR # |
+|:---:|:---|:---|:---|:---:|:---:|
+| T01 | Import M1 + contrôle régularité | Léo | `leo__T01__import_m1` | **DONE** | #1 |
+| T02 | Agrégation M1→M15 | Eliott | `eliott__T02__m15_agg` | **DONE** | #2 |
+| T03 | Nettoyage M15 + rapport qualité | Léo | `leo__T03__clean_m15` | **DONE** | #3 |
+| T04 | Analyse exploratoire (EDA) + ADF/ACF | Eliott | `eliott__t04__eda` | **DONE** | #5 |
+| T05 | Feature Pack V2 | Léo | `leo__t05__features_pack` | **DONE** | #6 |
+| T06 | Baseline règles + backtest | Eliott | `eliott__t06__baseline` | **DONE** | #7 |
+| T07 | ML (split temporel + modèles) | Léo | `leo__t07__machine_learning` | **DONE** | #8 |
+| T08 | RL (env + reward + entraînement) | Léo | `leo__t08__rl` | **DONE** | #9 |
+| T09 | Évaluation robuste | Léo | `leo__t09__evaluation_model` | **DONE** | #10 |
+| T10 | API (FastAPI) | Léo | `leo__t10__fastapi` | **DONE** | #11 |
+| T11 | Application / Versioning /Docker| Léo | `leo__t11__app` | **DONE** | #12 |
+| DOC | Documentation du projet | Léo | `leo__documentation` | **DONE**| #14 |
